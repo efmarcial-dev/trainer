@@ -85,7 +85,7 @@
     color: #000;
     font-size: 4rem;
     font-weight: 800;
-    padding: 1.5rem;
+    padding: 1rem;
     position: absolute;
     top: 2rem;
     left: 0rem;
@@ -278,6 +278,10 @@
     object-fit: cover;
   }
 
+  .program-text {
+    color: #000;
+  }
+
   @media (max-width: 1344px) {
     .plans {
         grid-template-columns: repeat(3, 1fr);
@@ -289,6 +293,9 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
+    .icon {
+        font-size: 4em;
+    }
 
   }
 
@@ -296,4 +303,11 @@
     .plans {
         grid-template-columns: 1fr;
        }
+    .program-text {
+        color: white !important;
+    }
+
+    .icon{
+        font-size: 4em;
+    }
   } 
