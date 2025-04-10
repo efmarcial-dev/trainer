@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cg8lq&dvegv$c_psergg8-iq2wqbaryqjbk4$#b$wtunho53&q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['trainer-cstd.onrender.com', '*']
 
 
 # Application definition
