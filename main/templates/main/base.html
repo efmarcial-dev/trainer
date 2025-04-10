@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://kit.fontawesome.com/31d703233c.js" crossorigin="anonymous"></script>
+    <title>{% block title %}Greg Personal Trainer{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar is-fixed-top has-background-black" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'home' %}" style="width: auto;">
+                <img src="{% static 'main/images/greg_personal_training.png' %}" alt="Personal Training" width="200" >
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+        </div>
+
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-start">
+                
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item has-dropdown is-hoverable is-success">
+                    <a class="navbar-link has-text-white">Services</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item has-text-white" >Body Building</a>
+                    </div>
+                </div>
+                <a href="" class="navbar-item has-text-white">Pricing</a>
+                <a href="" class="navbar-item has-text-white">About us</a>
+                <a href="" class="navbar-item has-text-white">Contact</a>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="" class="button is-rounded is-outlined is-primary">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    {% block content %}
+    
+    {% endblock %}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.getElementById('navMenu');
+
+            if (burger && menu) {
+                burger.addEventListener('click', () => {
+                    burger.classList.toggle('is-active');
+                    menu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay:{
+                delay: 2500, // 2.5 seconds between slides
+                disableOnInteraction: false, // Keeps autoplay even when user interacts with slide
+            },
+            speed: 1000, // slide transition speed
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            slidesPerView: 1,
+          });
+        });
+      </script>
+      
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Greg Personal Trainer. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
